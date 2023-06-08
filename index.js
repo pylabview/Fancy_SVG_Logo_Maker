@@ -1,10 +1,10 @@
 // node js modules
 const inquirer = require("inquirer");
 const fs = require("fs");
-
+// Custom modules
+const cliInputValidation = require("./libs/cliInputValidation");
 // DEBUG Flag GLobal
 const DEBUG = true;
-
 
 inquirer.prompt([
     {
@@ -12,15 +12,16 @@ inquirer.prompt([
         name: 'txt_input',
         message: "Enter Text (max. 3 chars): ",
         default: () => {},
-        validate: (txt_input) => checkUserTxt(txt_input,
-            "Please enter a valid GitHub username")
+        validate: (txt_input) => new cliInputValidation(txt_input,
+            ` --> Please enter three chars!!`).valTxt()
     },
     {
         type: 'input',
         name: 'email',
-        message: "Enter your email address: ",
+        message: "Enter color text (color or HEX value): ",
         default: () => {},
-        validate: (email) => checkEMail(email, 'Email address is not valid'),
+        validate: (color) => new cliInputValidation(color, 
+            ` --> Try again, ${color} is not valid!!`).valColor(),
     },
     {
         type: 'input',
