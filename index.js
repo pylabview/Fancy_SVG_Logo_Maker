@@ -17,63 +17,32 @@ inquirer.prompt([
     },
     {
         type: 'input',
-        name: 'email',
+        name: 'txt_color',
         message: "Enter color text (color or HEX value): ",
         default: () => {},
         validate: (color) => new cliInputValidation(color, 
             ` --> Try again, ${color} is not valid!!`).valColor(),
     },
-    {
-        type: 'input',
-        name: 'title',
-        message: 'What is your the project Title:',
-        default: () => {},
-        validate: (title) => checkTextLength(title,1,"The Title must be at least one word")
-    }
-    ,
-    {
-        type: 'editor',
-        name: 'description',
-        message:'*** Enter Project description: ',
-        default: () => {},
-        validate: (description) => checkTextLength(description,10,"The Description must be at least ten word")
-    },
-    {
-        type: 'editor',
-        name: 'installation_instructions',
-        message: 'Enter installation instructions: ',
-        default: () => {},
-        validate: (installation_instructions) => 
-                    checkParagraphLines(installation_instructions,1,"Must be at least one line")
-    },
+
     {
         type: 'list',
-        message: 'Enter license type',
-        name: 'license_type',
-        default: 'MIT',
-        choices: ['MIT',
-                  'Apache_v2.0', 
-                    'GNU_v3.0', 
-                    'ISC',
-                    'BSL_1.0',],
+        message: 'Enter shape Logo (Default is Circle): ',
+        name: 'shape_logo',
+        default: 'Circle',
+        choices: ['Circle',
+                  'Triangle', 
+                    'Square',
+    ] 
       },
       {
-          type: 'editor',
-          name: 'usage',
-          message: 'Enter usage information: ',
-          default: () => {},
-          validate: (installation_instructions) => 
-                      checkParagraphLines(installation_instructions,1,"Must be at least one line")
-      },
-      {
-          type: 'editor',
-          name: 'credits',
-          message: 'Enter credits information: ',
-          default: () => {},
-          validate: (credits) => 
-                      checkParagraphLines(credits,1,"Must be at least one line")
-      },
-      
+        type: 'input',
+        name: 'txt_shape_color',
+        message: "Enter color shape (color or HEX value): ",
+        default: () => {},
+        validate: (color) => new cliInputValidation(color, 
+            ` --> Try again, ${color} is not valid!!`).valColor(),
+    },
+     
 ]).then((answer) => {
     if(DEBUG) {console.log(answer)};
     const readme = generateREADME(answer);

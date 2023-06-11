@@ -47,4 +47,3 @@ class cliInputValidation{
 }
 
 module.exports = cliInputValidation;
-console.log(!(cssColors['Gray ']=== undefined));
