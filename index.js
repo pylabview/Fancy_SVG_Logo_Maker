@@ -3,6 +3,10 @@ const inquirer = require("inquirer");
 const fs = require("fs");
 // Custom modules
 const cliInputValidation = require("./libs/cliInputValidation");
+// --- Importing CLasses ---
+const Circle = require("./libs/circle");
+const Triangle = require("./libs/triangle");
+const Square = require("./libs/square");
 // DEBUG Flag GLobal
 const DEBUG = true;
 
@@ -36,18 +40,31 @@ inquirer.prompt([
       },
       {
         type: 'input',
-        name: 'txt_shape_color',
+        name: 'shape_color',
         message: "Enter color shape (color or HEX value): ",
         default: () => {},
         validate: (color) => new cliInputValidation(color, 
             ` --> Try again, ${color} is not valid!!`).valColor(),
     },
-     
+      
 ]).then((answer) => {
     if(DEBUG) {console.log(answer)};
-    const readme = generateREADME(answer);
-    fs.writeFile('README.md', readme, (err) =>
-    err ? console.log(err) : console.log('Successfully created README.md!')
-  );
+    if(answer['shape_logo'] === 'Circle'){
+        const newCircle = new Circle(answer['txt_input'],
+                                     answer['txt_color'], 
+                                     answer['shape_color'],);
+         newCircle.makeSVG();
+    }else if(answer['shape_logo'] === 'Square'){
+        const newSquare = new Square(answer['txt_input'],
+        answer['txt_color'], 
+        answer['shape_color'],);
+        newSquare.makeSVG();
+
+    }else if (answer['shape_logo'] === 'Triangle'){
+        const newTriangle = new Triangle(answer['txt_input'],
+        answer['txt_color'], 
+        answer['shape_color'],);
+        newTriangle.makeSVG();
+    }
 
 });

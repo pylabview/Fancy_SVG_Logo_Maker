@@ -6,8 +6,9 @@ THREE_CHARS = /[a-zA-Z0-9]{3}/;
 
 class cliInputValidation{
     constructor(txt, message){  
-        this.txt = txt.trim();
+        this.txt = txt.trim().charAt(0).toUpperCase() + txt.slice(1);
         this.message = message;
+        console.log(" From Class",this.txt);
     }
 
     valTxt(){
@@ -26,7 +27,7 @@ class cliInputValidation{
         }
     }
     valColorStrName(){
-        if(!(cssColors[this.txt.charAt(0)]=== undefined)){
+        if(!(cssColors[this.txt]=== undefined)){
                     return true;            
                 }else{
                     return false;
