@@ -22,6 +22,7 @@ class Shape {
             this.shape_frame_height = shape_frame_height;
             this.shape_frame_fill = shape_frame_fill;
             this.shape_xml_svg_str=shape_xml_svg_str;
+            
             this.generatedSVGString = `
             <svg version="1.1" width="300" height="200" xmlns="http://www.w3.org/2000/svg">
             <rect width= "${this.shape_frame_width}" height= "${this.shape_frame_height}" fill="${this.shape_frame_fill}" />  
