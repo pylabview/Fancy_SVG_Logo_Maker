@@ -11,20 +11,24 @@ class Triangle extends Shape {
         triangle_stroke='black',
         triangle_stroke_width=2,)
         {
-            const triangle_xml_svg = `
-            <polygon points="${triangle_points}" fill="${triangle_fill}" stroke = "${triangle_stroke}" stroke-width ='${triangle_stroke_width}' />
-            `
+            const triangle_xml_svg = `<polygon points="${triangle_points}" ` +
+            `fill="${triangle_fill}" `+ 
+            `stroke = "${triangle_stroke}" ` + 
+            `stroke-width ='${triangle_stroke_width}'/>`
             super(txt_string,
                 txt_fill_color,
                 txt_x,
                 txt_y,
                 txt_font,
                 triangle_xml_svg)
+            this.triangle_xml_svg = triangle_xml_svg;
         }
         render(){
             return this.triangle_xml_svg
         }
-
+        renderTxt(){
+            return super.shape_xml_text_svg_str;
+        }
 
 }
 

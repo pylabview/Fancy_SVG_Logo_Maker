@@ -14,18 +14,24 @@ class Square extends Shape {
         square_stroke='black',
         square_stroke_width=2
     ){
-        const square_xml_svg = `
-        <rect x="${square_x}" y="${square_y}" width="${square_width}" height="${square_height}" fill="${square_fill}" stroke = "${square_stroke}" stroke-width ="${square_stroke_width}"/>
-        `
+        const square_xml_svg = `<rect x="${square_x}" y="${square_y}" `+ 
+                                `width="${square_width}" height="${square_height}" `+ 
+                                `fill="${square_fill}" stroke = "${square_stroke}" `+ 
+                                `stroke-width ="${square_stroke_width}"/>`
         super(txt_string,
             txt_fill_color,
             txt_x,
             txt_y,
             txt_font,
             square_xml_svg)
+        this.square_xml_svg = square_xml_svg;
+
     }
     render(){
         return this.square_xml_svg
+    }
+    renderTxt(){
+        return super.shape_xml_text_svg_str;
     }
 
 }

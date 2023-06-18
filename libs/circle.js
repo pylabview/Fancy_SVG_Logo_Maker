@@ -13,19 +13,21 @@ class Circle extends Shape {
         circle_stroke='black',
         circle_stroke_width=2
         ){
-            const circle_xml_svg = `
-            <circle cx="${cx}" cy="${cy}" r="${circle_radius}" fill="${circle_fill}" stroke = "${circle_stroke}" stroke-width ="${circle_stroke_width}"/>
-            `
+            const circle_xml_svg = `<circle cx="${cx}" cy="${cy}" r="${circle_radius}" fill="${circle_fill}" ` +  
+            `stroke = "${circle_stroke}" stroke-width ="${circle_stroke_width}"/>`.trim();
             super(txt_string,
                 txt_fill_color,
                 txt_x,
                 txt_y,
                 txt_font,
                 circle_xml_svg)
-
+            this.circle_xml_svg = circle_xml_svg; 
         }
         render(){
-            return this.circle_xml_svg
+            return this.circle_xml_svg;
+        }
+        renderTxt(){
+            return super.shape_xml_text_svg_str;
         }
 
 }

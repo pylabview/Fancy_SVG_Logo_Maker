@@ -54,17 +54,23 @@ inquirer.prompt([
                                      answer['txt_color'], 
                                      answer['shape_color'],);
          newCircle.makeSVG();
+         if (DEBUG) console.log(newCircle.render());
+         if (DEBUG) console.log(newCircle.renderTxt());
     }else if(answer['shape_logo'] === 'Square'){
         const newSquare = new Square(answer['txt_input'],
         answer['txt_color'], 
         answer['shape_color'],);
         newSquare.makeSVG();
+        if(DEBUG) console.log(newSquare.render());
+        if (DEBUG) console.log(newSquare.renderTxt());
 
     }else if (answer['shape_logo'] === 'Triangle'){
         const newTriangle = new Triangle(answer['txt_input'],
         answer['txt_color'], 
         answer['shape_color'],);
         newTriangle.makeSVG();
+        if (DEBUG) console.log(newTriangle.render());
+        if (DEBUG) console.log(newTriangle.renderTxt());
     }
 
 });
