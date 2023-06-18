@@ -17,6 +17,7 @@ _______________________________________
 - [Usage](#usage)
 - [Credits](#credits)
 - [License](#license)
+- [Badges](#badges)
 - [Contact](#contact)
 - [Video](#video)
 
@@ -54,14 +55,17 @@ For Mac users, check this [link](https://www.macinstruct.com/tutorials/how-to-se
 ## Credits
 _______________________________________
 
-Need help! please consider coolaborate!
+Need help! please consider collaborate!
 
 
 ## License
 _______________________________________
-
 ![](https://img.shields.io/badge/license-ISC-green)
----
+
+## Badges
+_______________________________________
+![Static Badge](https://img.shields.io/badge/npm_package-inquirer-red)
+![Static Badge](https://img.shields.io/badge/npm_package-jest-red)
 
 
 ## How to Contribute
@@ -71,7 +75,12 @@ If you would like to contribute to this project, you can do so by following the 
 ## Contact
 
 Please feel free to reach out to me via email at <br>
-email: rodrigo19662001@gmail.com, Pylabview.
+email: rodrigo19662001@gmail.com
+
+[![Twitter URL](https://img.shields.io/twitter/url/https/twitter.com/rodrigo19662001.svg?style=social&label=Follow%20%40rodrigo19662001)](https://twitter.com/rodrigo19662001)<br>
+[![LinkedIn](https://img.shields.io/badge/linkedin-%230077B5.svg?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/rodrigoarguello/)<br>
+[![Github](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/pylabview)
+
 
 ## Video
 
