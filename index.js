@@ -8,7 +8,7 @@ const Circle = require("./libs/circle");
 const Triangle = require("./libs/triangle");
 const Square = require("./libs/square");
 // DEBUG Flag GLobal
-const DEBUG = true;
+const DEBUG = false;
 
 inquirer.prompt([
     {
