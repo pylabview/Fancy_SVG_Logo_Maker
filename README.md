@@ -37,20 +37,23 @@ _______________________________________
 ## Usage
 _______________________________________
 
-The application has simple entries for the README title,  and contact info (email, Github user). 
-
-For the other fields (description, installation and usage), it will open your default text editor for
-usage and instructions. For Windows, this is set during git bash installation and can be modified on the config globals:
-
-	$ ```git config --global core.editor "code --wait" for vs code```
-
-- Note: ```you should be available open vs code from the terminal. This can be achieved by adding it to the PATH```
-- Note: ```If there is no text editor set, the default is Vim.```
-
-For Mac users, check this [link](https://www.macinstruct.com/tutorials/how-to-set-nano-as-the-default-editor-for-git-on-your-mac/)
-
-
-
+The application has simple entries for the logo text, text-color, shape and shape-color-fill. 
+1. Go to <REPO_PATH>
+2. Run ```node index```
+3. Enter the text<br>
+```? Enter Text (max. 3 chars): ```
+4. Enter the color text<br>
+```? Enter color text (color or HEX value):  ```
+5. Select the logo shape<br>
+```? Enter shape Logo (Default is Circle):  (Use arrow keys)```<br>
+```❯ Circle ```<br>
+```  Triangle ```<br>
+```  Square ```<br>
+6. Enter the shape fill color:<br>
+```? Enter color shape (color or HEX value):```
+7. If everything is ok, it should display: <br>
+```Generated logo.svg```
+8. Check for file at examples folder: ```logo.svg``
 
 ## Credits
 _______________________________________
