@@ -2,7 +2,7 @@
 const inquirer = require("inquirer");
 const fs = require("fs");
 // Custom modules
-const cliInputValidation = require("./libs/cliInputValidation");
+const {cliInputValidation} = require("./libs/cliInputValidation");
 // --- Importing CLasses ---
 const Circle = require("./libs/circle");
 const Triangle = require("./libs/triangle");
@@ -16,8 +16,11 @@ inquirer.prompt([
         name: 'txt_input',
         message: "Enter Text (max. 3 chars): ",
         default: () => {},
-        validate: (txt_input) => new cliInputValidation(txt_input,
-            ` --> Please enter three chars!!`).valTxt()
+        validate: (txt_input) => {
+            const userInput = new cliInputValidation(txt_input,
+            ` --> Please enter three chars!!`);
+            return userInput.valTxt();
+        }
     },
     {
         type: 'input',

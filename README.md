@@ -24,7 +24,7 @@ _______________________________________
 _______________________________________
 
 - Clone application repo from github:
-```git clone git@github.com:pylabview/README_Generator.git```
+```git clone git@github.com:pylabview/ancy_SVG_Logo_Maker.git```
 - Go inside the repo folders:
 ```cd <REPO_PATH>```
 - Install dependencies:
